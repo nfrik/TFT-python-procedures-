@@ -1,4 +1,4 @@
-#Works on Pxy matrices produced by Hardyplus
+#Supposed to work on files withing several folders
 #
 #
 #
@@ -20,7 +20,7 @@ rootdirpath=os.getcwd()
 #with open('../01262014/ber2nh_02132014/procedural/metafile.dat','r') as f:
 #       filenames=f.read().splitlines()
 
-with open('./dir1/metadat.txt','r') as f:
+with open('../dir1/metadat.txt','r') as f:
        filenames=f.read().splitlines()
 
 fl=0
@@ -29,7 +29,7 @@ jmax=10
 fstep=1000 
 #filenames=filenames[0:200]
 ints=zeros((imax,jmax,shape(filenames)[0]))
-for line in filenames:
+for line in folders:
        #frames=range(100000,1001000,1000)
        frames=range(0,size(filenames));
        data=zeros((imax,jmax,shape(frames)[0],shape(filenames)[0]))
